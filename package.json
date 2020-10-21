@@ -1,0 +1,23 @@
+{
+  "name": "popgen",
+  "version": "1.0.0",
+  "description": "Diversity visualized across some countries",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w wait 2000",
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scsx/PopGen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scsx/PopGen/issues"
+  },
+  "homepage": "https://github.com/scsx/PopGen#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
