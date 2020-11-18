@@ -2,10 +2,10 @@ const main = document.getElementById("main");
 const peopleSelect = document.getElementById("numberOfPersons");
 
 let settings = {
-    peopleNr: peopleSelect.value || 20,
-    defaultLocal: local_World
+    peopleNr: peopleSelect.value === "0" ? 100 : peopleSelect.value,
+    defaultLocal: local_Toronto
 }
-
+log(peopleSelect.value);
 // Calculate probabilities
 function getClass(probs, cssClasses) {
     const arr = [];
@@ -21,36 +21,42 @@ function getClass(probs, cssClasses) {
     return cssClasses[i];
 }
 
-// Test getClass
-var probabilities = [33, 33, 34]; // 20%, 70% and 10%
-var cssClasses = ["redhead", "blonde", "dark"]; // the functions array
-for (let i = 0; i < 20; i++) {
-    // getClass(probabilities, cssClasses);
+// Get obj keys and values
+function getKeys(obj) {
+    return Object.keys(obj)
 }
 
+function getVals(obj) {
+    return Object.values(obj)
+}
+
+// Main draw function
 function drawFaces(region) {
     
-    const raceList = Object.keys(region.races);
-    const raceProbs = Object.values(region.races);
+    const raceList = getKeys(region.races);
+    const raceProbs = getVals(region.races);
 
     // Create divs
     for (let i = 0; i < settings.peopleNr; i++) {
         const personRace = getClass(raceProbs, raceList);
         const traits = types.find(x => x.name === personRace).traits;
-        const skin = getClass(Object.values(traits.skins), Object.keys(traits.skins)); 
-        log(skin);
-
+        const skin = getClass(getVals(traits.skins), getKeys(traits.skins));
+        const hair = getClass(getVals(traits.hair), getKeys(traits.hair));
+        const eyes = getClass(getVals(traits.eyes), getKeys(traits.eyes));
+        const facialhair = getClass(getVals(traits.facialhair), getKeys(traits.facialhair));
+        
         const person = document.createElement("div");
-        person.classList.add("person");
-        person.classList.add("person--" + personRace);
+        person.classList.add("person", "person--" + personRace);
         person.innerHTML = `
-            <div class="person__hair"></div>
-            <div class="person__ear"></div>
-            <div class="person__ear right"></div>
-            <div class="person__fringe"></div>
-            <div class="person__face"></div>
-            <div class="person__eye"></div>
-            <div class="person__nose"></div>
+            <div class="person__hair ${hair}"></div>
+            <div class="person__ear ${skin}"></div>
+            <div class="person__ear person__ear--right ${skin}"></div>
+            <div class="person__fringe ${hair}"></div>
+            <div class="person__face ${skin}"></div>
+            <div class="person__eye ${eyes}"></div>
+            <div class="person__nose shade_${skin}"></div>
+                <div
+                class="person__facialhair person__facialhair--${facialhair} ${hair}"></div>
             <div class="person__mouth">
                 <div class="person__tongue"></div>
             </div>

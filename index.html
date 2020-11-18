@@ -15,7 +15,15 @@
         <h1>Population Generator</h1>
 
         <div class="console">
-            <select id="numberOfPersons">
+            <button class="flat-button">US</button>
+            <button class="flat-button">US 1950</button>
+            <button class="flat-button">India</button>
+            <button class="flat-button">Portugal</button>
+            <button class="flat-button">South Africa</button>
+            <button class="flat-button">UK</button>
+            <button class="flat-button">Toronto</button>
+            <div class="select hide">
+                <select id="numberOfPersons">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -28,32 +36,43 @@
                 <option value="9">9</option>
                 <option value="10">10</option>
                 <option value="11">11</option>
-                <option value="20" selected>20</option>
+                <option value="20">20</option>
                 <option value="50">50</option>
                 <option value="100">100</option>
             </select>
-        </div>
-
-        <main id="main"></main>
-
-        <div class="person person--big">
-            <div class="person__hair"></div>
-            <div class="person__ear"></div>
-            <div class="person__ear right"></div>
-            <div class="person__fringe"></div>
-            <div class="person__face"></div>
-            <div class="person__eye"></div>
-            <div class="person__nose"></div>
-            <div class="person__mouth">
-                <div class="person__tongue"></div>
             </div>
         </div>
 
-<div class="colored-div1">a</div>
-<div class="colored-div2">b</div>
-<div class="colored-div3">c</div>
-<div class="colored-div4">d</div>
-<div class="colored-div5">e</div>
+        <button class="flat-button flat-button--run">Generate</button>
+
+        <main id="main"></main>
+
+        <div class="person person--Black person--big hide">
+            <div class="person__hair hair_black"></div>
+            <div class="person__ear skin_black3"></div>
+            <div class="person__ear person__ear--right skin_black3"></div>
+            <div class="person__fringe hair_black"></div>
+            <div class="person__face skin_black3"></div>
+            <div class="person__eye eyes_brown"></div>
+            <div class="person__nose shade_skin_black3"></div>
+            <div class="person__mouth">
+                <div class="person__tongue"></div>
+            </div>
+            <p class="info hide">Black</p>
+        </div>
+        <div class="person person--Asian person--big">
+            <div class="person__hair hair_black"></div>
+            <div class="person__ear skin_asian3"></div>
+            <div class="person__ear person__ear--right skin_asian3"></div>
+            <div class="person__fringe hair_black"></div>
+            <div class="person__face skin_asian3"></div>
+            <div class="person__eye eyes_brown"></div>
+            <div class="person__nose shade_skin_asian3"></div>
+            <div class="person__mouth">
+                <div class="person__tongue"></div>
+            </div>
+            <p class="info hide">Asian</p><p>
+        </p></div>
 
         <script src="js/ethnicities.js"></script>
         <script src="js/locals.js"></script>

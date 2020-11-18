@@ -1,0 +1,49 @@
+// COLORS
+
+// Interface
+$body: #1e5c80;
+$reddish : #fff8d1;
+$redder : darken($reddish, 10);
+
+// Character
+$skin: #f0beaf;
+$grey: #424b54;
+$pink: #f6828c;
+$mouth: #272526;
+$blackhair: #272526;
+
+
+.eyes_blue {
+    background-color: #30a4e8;
+}
+.eyes_green {
+    background-color: #1faf48;
+}
+.eyes_brown {
+    background-color: #111111;
+}
+.eyes_hazel {
+    background-color: #9c6f3e;
+}
+
+// color so that beard can inherit it to its border
+.hair_blonde1 {
+    color: #f1c964;
+    background-color: #f1c964;
+}
+.hair_blonde2 {
+    color: #b58b20;
+    background-color: #b58b20;
+}
+.hair_black {
+    color: $blackhair;
+    background-color: $blackhair;
+}
+.hair_brown {
+    color: #6d5f50;
+    background-color: #6d5f50;
+}
+.hair_redhead {
+    color: #ce6f2b;
+    background-color: #ce6f2b;
+}

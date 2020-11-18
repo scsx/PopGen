@@ -1,17 +1,204 @@
+.eyes_blue {
+  background-color: #30a4e8; }
+
+.eyes_green {
+  background-color: #1faf48; }
+
+.eyes_brown {
+  background-color: #111111; }
+
+.eyes_hazel {
+  background-color: #9c6f3e; }
+
+.hair_blonde1 {
+  color: #f1c964;
+  background-color: #f1c964; }
+
+.hair_blonde2 {
+  color: #b58b20;
+  background-color: #b58b20; }
+
+.hair_black {
+  color: #272526;
+  background-color: #272526; }
+
+.hair_brown {
+  color: #6d5f50;
+  background-color: #6d5f50; }
+
+.hair_redhead {
+  color: #ce6f2b;
+  background-color: #ce6f2b; }
+
+.eyes_blue {
+  background-color: #30a4e8; }
+
+.eyes_green {
+  background-color: #1faf48; }
+
+.eyes_brown {
+  background-color: #111111; }
+
+.eyes_hazel {
+  background-color: #9c6f3e; }
+
+.hair_blonde1 {
+  color: #f1c964;
+  background-color: #f1c964; }
+
+.hair_blonde2 {
+  color: #b58b20;
+  background-color: #b58b20; }
+
+.hair_black {
+  color: #272526;
+  background-color: #272526; }
+
+.hair_brown {
+  color: #6d5f50;
+  background-color: #6d5f50; }
+
+.hair_redhead {
+  color: #ce6f2b;
+  background-color: #ce6f2b; }
+
 .skin_white0 {
-  background: #ffd8b1; }
+  background: #fddcc4; }
+
+.shade_skin_white0 {
+  background: #fbbf93; }
 
 .skin_white1 {
-  background: #ffd5ac; }
+  background: #fdd6ba; }
+
+.shade_skin_white1 {
+  background: #fbb989; }
 
 .skin_white2 {
-  background: #ffce9d; }
+  background: #fcd0b0; }
+
+.shade_skin_white2 {
+  background: #fbb37f; }
 
 .skin_white3 {
-  background: #ffc183; }
+  background: #fccaa6; }
+
+.shade_skin_white3 {
+  background: #faad75; }
 
 .skin_white4 {
-  background: #ffaf5f; }
+  background: #fcc59d; }
+
+.shade_skin_white4 {
+  background: #faa76b; }
+
+.skin_black0 {
+  background: #906f53; }
+
+.shade_skin_black0 {
+  background: #705640; }
+
+.skin_black1 {
+  background: #8a6a4f; }
+
+.shade_skin_black1 {
+  background: #69513d; }
+
+.skin_black2 {
+  background: #83654c; }
+
+.shade_skin_black2 {
+  background: #634c39; }
+
+.skin_black3 {
+  background: #7d6048; }
+
+.shade_skin_black3 {
+  background: #5c4735; }
+
+.skin_black4 {
+  background: #765b44; }
+
+.shade_skin_black4 {
+  background: #564231; }
+
+.skin_black5 {
+  background: #705640; }
+
+.shade_skin_black5 {
+  background: #4f3d2e; }
+
+.skin_asian0 {
+  background: #fbe9bb; }
+
+.shade_skin_asian0 {
+  background: #f8d98b; }
+
+.skin_asian1 {
+  background: #fae6b1; }
+
+.shade_skin_asian1 {
+  background: #f8d681; }
+
+.skin_asian2 {
+  background: #fae3a8; }
+
+.shade_skin_asian2 {
+  background: #f7d378; }
+
+.skin_asian3 {
+  background: #f9e09e; }
+
+.shade_skin_asian3 {
+  background: #f6d06e; }
+
+.skin_indian0 {
+  background: #c58a4e; }
+
+.shade_skin_indian0 {
+  background: #a97037; }
+
+.skin_indian1 {
+  background: #c28546; }
+
+.shade_skin_indian1 {
+  background: #a16b35; }
+
+.skin_indian2 {
+  background: #c0803f; }
+
+.shade_skin_indian2 {
+  background: #996632; }
+
+.skin_indian3 {
+  background: #b87b3c; }
+
+.shade_skin_indian3 {
+  background: #926130; }
+
+.skin_indian4 {
+  background: #b0763a; }
+
+.shade_skin_indian4 {
+  background: #8a5c2d; }
+
+.skin_native0 {
+  background: #d09e7d; }
+
+.shade_skin_native0 {
+  background: #c28258; }
+
+.skin_native1 {
+  background: #cd9876; }
+
+.shade_skin_native1 {
+  background: #c07c50; }
+
+.skin_native2 {
+  background: #cb936e; }
+
+.shade_skin_native2 {
+  background: #bd7749; }
 
 .person__face,
 .person__hair,
@@ -27,7 +214,8 @@
 .person__tongue,
 .person__face-wrap,
 .person__name,
-.person__mouth {
+.person__mouth,
+.person__facialhair {
   position: absolute; }
 
 .person {
@@ -44,130 +232,195 @@
     transform: scale(2);
     margin-bottom: 0;
     margin-right: 0; }
-
-.person__face {
-  border-radius: 100px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border: 78px 78px 100px 100px;
-  z-index: 20;
-  top: 50px;
-  left: 70px;
-  width: 80px;
-  height: 100px;
-  background: #f0beaf; }
-
-.person__hair {
-  z-index: 3;
-  top: 30px;
-  left: 58px;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  background: #424b54; }
-
-.person__ear {
-  z-index: 1;
-  top: 86px;
-  left: 58px;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  background: #f0beaf; }
-  .person__ear:before {
-    position: absolute;
-    top: 5px;
-    left: 4px;
-    content: "";
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    background: #ed8a80; }
-
-.person__ear.person__right {
-  left: 130px; }
-
-.person__fringe {
-  z-index: 99;
-  top: 30px;
-  left: 73px;
-  width: 80px;
-  height: 40px;
-  background: #424b54;
-  border-radius: 100% 0 100% 100%;
-  transform: rotate(-4deg); }
-  .person__fringe:before {
-    position: absolute;
-    content: "";
-    top: 18px;
-    left: -15px;
-    width: 20px;
-    height: 40px;
-    background: #424b54;
-    border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    transform: rotate(10deg); }
-
-.person__eye {
-  z-index: 30;
-  top: 90px;
-  left: 80px;
-  width: 10px;
-  height: 10px;
-  background: #424b54;
-  border-radius: 100%;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%; }
-  .person__eye:before {
-    position: absolute;
-    content: "";
-    left: 50px;
-    width: 10px;
-    height: 10px;
-    background: #424b54;
+  .person__face {
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border: 78px 78px 100px 100px;
+    z-index: 20;
+    top: 50px;
+    left: 70px;
+    width: 80px;
+    height: 100px; }
+  .person__hair {
+    z-index: 3;
+    top: 30px;
+    left: 58px;
+    width: 100px;
+    height: 100px;
     border-radius: 100%;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%; }
+  .person__ear {
+    z-index: 1;
+    top: 86px;
+    left: 58px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%; }
+    .person__ear:before {
+      position: absolute;
+      top: 5px;
+      left: 3px;
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%; }
+    .person__ear__ear--right {
+      left: 130px; }
+      .person__ear__ear--right:before {
+        left: 6px; }
+  .person__fringe {
+    z-index: 99;
+    top: 30px;
+    left: 73px;
+    width: 80px;
+    height: 40px;
+    border-radius: 100% 0 100% 100%;
+    transform: rotate(-4deg); }
+    .person__fringe:before {
+      position: absolute;
+      content: "";
+      top: 18px;
+      left: -15px;
+      width: 20px;
+      height: 40px;
+      background: inherit;
+      border-radius: 100%;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      transform: rotate(10deg); }
+  .person__eye {
+    z-index: 30;
+    top: 90px;
+    left: 80px;
+    width: 15px;
+    height: 15px;
+    border: 3px solid white;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%; }
+    .person__eye:before {
+      position: absolute;
+      content: "";
+      left: 43px;
+      top: -3px;
+      width: 15px;
+      height: 15px;
+      background: inherit;
+      border: 3px solid white;
+      border-radius: 100%;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%; }
+  .person__nose {
+    z-index: 20;
+    top: 100px;
+    left: 107px;
+    width: 8px;
+    height: 14px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px; }
+    .person__nose__Black {
+      transform: rotate(90deg); }
+  .person__mouth {
+    z-index: 20;
+    top: 124px;
+    left: 95px;
+    width: 30px;
+    height: 15px;
+    border-radius: 0 0 100px 100px;
+    background: #272526;
+    overflow: hidden; }
+  .person__tongue {
+    top: 5px;
+    left: 8px;
+    width: 30px;
+    height: 20px;
+    background: #f6828c;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%; }
+  .person__facialhair--moustache {
+    z-index: 25;
+    top: 117px;
+    left: 94px;
+    width: 33px;
+    height: 4px; }
+  .person__facialhair--beard {
+    z-index: 25;
+    top: 117px;
+    left: 83px;
+    width: 54px;
+    height: 39px;
+    background-color: transparent;
+    border-style: solid;
+    border-color: inherit;
+    border-top-width: 4px;
+    border-right-width: 10px;
+    border-bottom-width: 14px;
+    border-left-width: 10px;
+    border-radius: 4px 4px 30px 30px; }
 
-.person__nose {
-  z-index: 20;
-  top: 100px;
-  left: 107px;
-  width: 8px;
-  height: 14px;
-  background: #0000001a;
-  border-radius: 100px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px; }
-  .person__nose.person__Black {
-    transform: rotate(90deg); }
+.person.person--Black .person__nose {
+  transform: rotate(90deg); }
 
-.person__mouth {
-  z-index: 20;
-  top: 120px;
-  left: 97px;
-  width: 30px;
-  height: 15px;
-  border-radius: 0 0 100px 100px;
-  background: #424b54;
-  overflow: hidden; }
+.person.person--Black .person__hair {
+  border: 2px dashed #1e5c80;
+  box-sizing: border-box; }
 
-.person__tongue {
-  top: 5px;
-  left: 8px;
-  width: 30px;
-  height: 20px;
-  background: #f6828c;
-  border-radius: 100%;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%; }
+.person.person--Black .person__face {
+  border-radius: 70px 70px 100px 100px;
+  -webkit-border-radius: 70px 70px 100px 100px;
+  height: 90px;
+  top: 60px;
+  /*
+        -webkit-border-radius: 70px 100px 70px 100px;
+        width: 100px;
+        height: 100px;
+        transform: rotate(225deg);
+        */ }
+
+.person.person--Black .person__fringe {
+  display: none; }
+
+.person.person--Indian .person__fringe {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  left: 63px; }
+
+.person.person--EU_North .person__face {
+  border-radius: 100px 100px 80px 80px;
+  -webkit-border-radius: 100px 100px 80px 80px; }
+
+.person.person--EU_South .person__face {
+  border-radius: 100px 100px 88px 88px;
+  -webkit-border-radius: 100px 100px 88px 88px; }
+
+.person.person--Asian .person__face {
+  border-radius: 100px 100px 100px 100px;
+  -webkit-border-radius: 100px 100px 100px 100px; }
+
+.person.person--Asian .person__fringe {
+  border-radius: 100% 100% 0 100%;
+  top: 34px;
+  width: 72px; }
+  .person.person--Asian .person__fringe:before {
+    width: 18px; }
+
+.person.person--Asian .person__eye {
+  height: 3px;
+  border: none;
+  border-radius: 2px; }
+  .person.person--Asian .person__eye:before {
+    border-radius: 2px;
+    height: 3px;
+    border: none;
+    top: 0; }
 
 *,
 *::after,
@@ -181,13 +434,14 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: #30a4e8;
-  font-family: 'Source Code Pro', sans-serif;
+  background-color: #1e5c80;
+  font-family: "Source Code Pro", sans-serif;
   min-height: 100vh;
   margin: 0; }
 
 main {
-  padding: 3rem; }
+  padding: 0 13rem 3rem 13rem;
+  text-align: center; }
 
 h1 {
   font-size: 3rem;
@@ -195,7 +449,7 @@ h1 {
   font-size: 6rem;
   margin: 2rem 0;
   color: gold;
-  text-shadow: 3px 3px #0d6090; }
+  text-shadow: 3px 3px #103950; }
 
 p {
   font-size: 2.2rem;
@@ -207,3 +461,91 @@ p {
 
 .hide {
   display: none; }
+
+.console {
+  background-color: #236b95;
+  box-shadow: 10px 10px #143e57;
+  margin: 2rem 20rem;
+  padding: 2rem;
+  display: flex; }
+
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #143e57;
+  background-image: none; }
+
+select::-ms-expand {
+  display: none; }
+
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #143e57;
+  overflow: hidden;
+  border-radius: 0.25em; }
+
+select {
+  flex: 1;
+  padding: 0 0.5em;
+  color: #fff;
+  cursor: pointer; }
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #143e57;
+  border-left: 1px solid #194d6b;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease; }
+
+.select:hover::after {
+  color: #f39c12; }
+
+.flat-button {
+  border: none;
+  position: relative;
+  background: #fff8d1;
+  margin: 0 2rem 0 0;
+  overflow: hidden;
+  z-index: 1;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: color 0.3s;
+  /* Typo */
+  font-family: "Source Code Pro", sans-serif;
+  text-align: center;
+  color: #143e57;
+  font-weight: bold;
+  font-size: 2rem; }
+  .flat-button--run {
+    margin: 5rem auto;
+    display: block; }
+
+.flat-button:after {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff09e;
+  content: "";
+  z-index: -2;
+  transition: transform 0.3s; }
+
+.flat-button:hover::after {
+  transform: translateY(-80%);
+  transition: transform 0.3s; }

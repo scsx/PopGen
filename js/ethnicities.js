@@ -16,12 +16,14 @@ const types = [
             eyes_shape: "round",
             face_shape: "face_eu_north",
             hair: {
-                hair_blonde: 50,
+                hair_blonde1: 35,
+                hair_blonde2: 15,
                 hair_black: 12,
                 hair_brown: 33,
                 hair_redhead: 5
             },
-            extras: {
+            facialhair: {
+                clean: 75,
                 beard: 20,
                 moustache: 5
             }
@@ -44,12 +46,14 @@ const types = [
             eyes_shape: "round",
             face_shape: "face_eu_south",
             hair: {
-                hair_blonde: 10,
+                hair_blonde1: 2,
+                hair_blonde2: 4.5,
                 hair_black: 60,
-                hair_brown: 29,
-                hair_redhead: 1
+                hair_brown: 33,
+                hair_redhead: .5
             },
-            extras: {
+            facialhair: {
+                clean: 75,
                 beard: 5,
                 moustache: 20
             }
@@ -59,9 +63,11 @@ const types = [
         name: "Black",
         traits: {
             skins: {
-                skin_black1: 33,
-                skin_black2: 34,
-                skin_black3: 33
+                skin_black1: 20,
+                skin_black2: 20,
+                skin_black3: 20,
+                skin_black4: 20,
+                skin_black5: 20
             },
             eyes: {
                 eyes_brown: 90,
@@ -72,7 +78,8 @@ const types = [
             hair: {
                 hair_black: 100
             },
-            extras: {
+            facialhair: {
+                clean: 85,
                 beard: 5,
                 moustache: 15
             }
@@ -82,8 +89,10 @@ const types = [
         name: "Indian",
         traits: {
             skins: {
-                skin_indian1: 67,
-                skin_indian2: 33
+                skin_indian1: 50,
+                skin_indian2: 30,
+                skin_indian3: 15,
+                skin_indian4: 5
             },
             eyes: {
                 eyes_brown: 75,
@@ -95,7 +104,8 @@ const types = [
             hair: {
                 hair_black: 100
             },
-            extras: {
+            facialhair: {
+                clean: 63,
                 beard: 2,
                 moustache: 35
             }
@@ -105,8 +115,9 @@ const types = [
         name: "Asian",
         traits: {
             skins: {
-                skin_asian1: 67,
-                skin_asian2: 33
+                skin_asian1: 50,
+                skin_asian2: 25,
+                skin_asian3: 25
             },
             eyes: {
                 eyes_brown: 100
@@ -116,7 +127,8 @@ const types = [
             hair: {
                 hair_black: 100
             },
-            extras: {
+            facialhair: {
+                clean: 100
             }
         }
     },
@@ -137,9 +149,10 @@ const types = [
             hair: {
                 hair_black: 90,
                 hair_brown: 8,
-                hair_blonde: 2
+                hair_blonde2: 2,
             },
-            extras: {
+            facialhair: {
+                clean: 60,
                 beard: 5,
                 moustache: 35
             }
@@ -159,7 +172,8 @@ const types = [
             hair: {
                 hair_black: 100
             },
-            extras: {
+            facialhair: {
+                clean: 100
             }
         }
     }

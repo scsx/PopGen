@@ -35,11 +35,11 @@ const local_US1950 = {
 
 const local_Portugal = {
     "races": {
-        EU_North: 10,
-        EU_South: 80,
-        Latin: 4,
-        Black: 5,
-        Indian: 1
+        EU_North: 12,
+        EU_South: 84,
+        Black: 3.5,
+        Indian: .25,
+        Indian: .25
     }
 };
 
@@ -59,5 +59,36 @@ const local_UK = {
         Black: 4,
         Asian: 1,
         Indian: 8
+    }
+};
+
+const local_India = {
+    "races": {
+        Indian: 99.8,
+        EU_North: .1,
+        EU_South: .1
+    }
+};
+
+const local_Toronto = {
+    "races": {
+        EU_North: 35,
+        EU_South: 15,
+        Black: 13,
+        Asian: 15,
+        Indian: 15,
+        Native: 1,
+        Latin: 6,
+    }
+};
+
+const local_Ireland = {
+    "races": {
+        EU_North: 70,
+        EU_South: 26,
+        Black: 1,
+        Asian: 1,
+        Indian: 1,
+        Latin: 1,
     }
 };

@@ -15,14 +15,15 @@ html {
 
 body {
     box-sizing: border-box;
-    background-color: #30a4e8;
-    font-family: 'Source Code Pro', sans-serif;
+    background-color: $body;
+    font-family: "Source Code Pro", sans-serif;
     min-height: 100vh;
     margin: 0;
 }
 
 main {
-    padding: 3rem;
+    padding: 0 13rem 3rem 13rem;
+    text-align: center;
 }
 
 h1 {
@@ -31,7 +32,7 @@ h1 {
     font-size: 6rem;
     margin: 2rem 0;
     color: gold;
-    text-shadow: 3px 3px #0d6090;
+    text-shadow: 3px 3px #103950;
 }
 
 p {
@@ -47,6 +48,101 @@ p {
     display: none;
 }
 
-@media (max-width: 700px) {
-    
+.console {
+    background-color: lighten($body, 5);
+    box-shadow: 10px 10px darken($body, 10);
+    margin: 2rem 20rem;
+    padding: 2rem;
+    display: flex;
+}
+
+// Select
+/* Reset Select */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: darken($body, 10);
+    background-image: none;
+}
+select::-ms-expand {
+    display: none;
+}
+
+.select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: darken($body, 10);
+    overflow: hidden;
+    border-radius: 0.25em;
+}
+select {
+    flex: 1;
+    padding: 0 0.5em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: darken($body, 10);
+    border-left: 1px solid darken($body, 5);
+    cursor: pointer;
+    pointer-events: none;
+    transition: 0.25s all ease;
+}
+
+.select:hover::after {
+    color: #f39c12;
+}
+
+// Btn
+.flat-button {
+    border: none;
+    position: relative;
+    background: $reddish;
+    margin: 0 2rem 0 0;
+    overflow: hidden;
+    z-index: 1;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    /* Typo */
+    font-family: "Source Code Pro", sans-serif;
+    text-align: center;
+    color: darken($body, 10);
+    font-weight: bold;
+    font-size: 2rem;
+    &--run {
+        margin: 5rem auto;
+        display: block;
+    }
+}
+
+.flat-button:after {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $redder;
+    content: "";
+    z-index: -2;
+    transition: transform 0.3s;
+}
+
+.flat-button:hover::after {
+    transform: translateY(-80%);
+    transition: transform 0.3s;
 }

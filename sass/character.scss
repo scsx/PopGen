@@ -1,16 +1,6 @@
+@import "colors";
+
 // Base: https://codepen.io/sashatran/pen/egjBar
-
-// COLORS
-$skin: #f0beaf;
-$grey: #424b54;
-$pink: #f6828c;
-
-$eyes_blue: blue;
-$eyes_green: green;
-$eyes_brown: brown;
-$eyes_hazel: orange;
-
-
 // MIXINS
 @mixin border($b) {
     border-radius: $b;
@@ -18,25 +8,27 @@ $eyes_hazel: orange;
     -moz-border-radius: $b;
 }
 
-@mixin bck($c) {
-    background-color: $c;
-}
-
-@mixin colorWhiteSkin ($count, $baseName, $startcolor) {
+@mixin colorvariant($name, $count, $startcolor) {
     @for $i from 0 through $count {
-        $background-color: darken($startcolor, $i * $i); 
-    .skin_white#{$i} {
-      background: $background-color;
-    }
-   }
+        $background-color: darken($startcolor, $i + $i);
+        $background-color-darker: darken($background-color, 10);
 
+        .skin_#{$name}#{$i} {
+            background: $background-color;
+        }
+        .shade_skin_#{$name}#{$i} {
+            background: $background-color-darker;
+        }
+    }
 }
 
-@include colorWhiteSkin(4, 'a', #ffd8b1);
+@include colorvariant("white", 4, #fddcc4);
+@include colorvariant("black", 5, #906f53);
+@include colorvariant("asian", 3, #fbe9bb);
+@include colorvariant("indian", 4, #c58a4e);
+@include colorvariant("native", 2, #d09e7d);
 
-
-
-
+// FACE
 .person__face,
 .person__hair,
 .person__nose,
@@ -51,7 +43,8 @@ $eyes_hazel: orange;
 .person__tongue,
 .person__face-wrap,
 .person__name,
-.person__mouth {
+.person__mouth,
+.person__facialhair {
     position: absolute;
 }
 
@@ -71,124 +64,222 @@ $eyes_hazel: orange;
         margin-bottom: 0;
         margin-right: 0;
     }
-}
 
-.person__face {
-    @include border(100px);
-    border: 78px 78px 100px 100px;
-    z-index: 20;
-    top: 50px;
-    left: 70px;
-    width: 80px;
-    height: 100px;
-    background: #f0beaf;
-}
-
-.person__hair {
-    z-index: 3;
-    top: 30px;
-    left: 58px;
-    width: 100px;
-    height: 100px;
-    @include border(100%);
-    background: $grey;
-}
-
-.person__ear {
-    z-index: 1;
-    top: 86px;
-    left: 58px;
-    width: 30px;
-    height: 30px;
-    @include border(100%);
-    background: $skin;
-    &:before {
-        position: absolute;
-        top: 5px;
-        left: 4px;
-        content: "";
-        width: 20px;
-        height: 20px;
-        @include border(100%);
-        background: #ed8a80;
+    &__face {
+        @include border(100px);
+        border: 78px 78px 100px 100px;
+        z-index: 20;
+        top: 50px;
+        left: 70px;
+        width: 80px;
+        height: 100px;
     }
-}
 
-.person__ear.person__right {
-    left: 130px;
-}
+    &__hair {
+        z-index: 3;
+        top: 30px;
+        left: 58px;
+        width: 100px;
+        height: 100px;
+        @include border(100%);
+    }
 
-.person__fringe {
-    z-index: 99;
-    top: 30px;
-    left: 73px;
-    width: 80px;
-    height: 40px;
-    background: $grey;
-    border-radius: 100% 0 100% 100%;
-    transform: rotate(-4deg);
-    &:before {
-        position: absolute;
-        content: "";
-        top: 18px;
-        left: -15px;
-        width: 20px;
+    &__ear {
+        z-index: 1;
+        top: 86px;
+        left: 58px;
+        width: 30px;
+        height: 30px;
+        @include border(100%);
+        &:before {
+            position: absolute;
+            top: 5px;
+            left: 3px;
+            content: "";
+            width: 20px;
+            height: 20px;
+            @include border(100%);
+        }
+        &__ear--right {
+            left: 130px;
+            &:before {
+                left: 6px;
+            }
+        }
+    }
+
+    &__fringe {
+        z-index: 99;
+        top: 30px;
+        left: 73px;
+        width: 80px;
         height: 40px;
-        background: #424b54;
+        border-radius: 100% 0 100% 100%;
+        transform: rotate(-4deg);
+        &:before {
+            position: absolute;
+            content: "";
+            top: 18px;
+            left: -15px;
+            width: 20px;
+            height: 40px;
+            background: inherit;
+            @include border(100%);
+            transform: rotate(10deg);
+        }
+    }
+
+    &__eye {
+        z-index: 30;
+        top: 90px;
+        left: 80px;
+        width: 15px;
+        height: 15px;
+        border: 3px solid white;
         @include border(100%);
-        transform: rotate(10deg);
+        &:before {
+            position: absolute;
+            content: "";
+            left: 43px;
+            top: -3px;
+            width: 15px;
+            height: 15px;
+            background: inherit;
+            border: 3px solid white;
+            @include border(100%);
+        }
+    }
+
+    &__nose {
+        z-index: 20;
+        top: 100px;
+        left: 107px;
+        width: 8px;
+        height: 14px;
+        @include border(100px);
+
+        &__Black {
+            transform: rotate(90deg);
+        }
+    }
+
+    &__mouth {
+        z-index: 20;
+        top: 124px;
+        left: 95px;
+        width: 30px;
+        height: 15px;
+        border-radius: 0 0 100px 100px;
+        background: $mouth;
+        overflow: hidden;
+    }
+
+    &__tongue {
+        top: 5px;
+        left: 8px;
+        width: 30px;
+        height: 20px;
+        background: $pink;
+        @include border(100%);
+    }
+
+    &__facialhair {
+        &--moustache {
+            z-index: 25;
+            top: 117px;
+            left: 94px;
+            width: 33px;
+            height: 4px;
+        }
+        &--beard {
+            z-index: 25;
+            top: 117px;
+            left: 83px;
+            width: 54px;
+            height: 39px;
+            background-color: transparent;
+            border-style: solid;
+            border-color: inherit;
+            border-top-width: 4px;
+            border-right-width: 10px;
+            border-bottom-width: 14px;
+            border-left-width: 10px;
+            border-radius: 4px 4px 30px 30px;
+        }
     }
 }
 
-.person__eye {
-    z-index: 30;
-    top: 90px;
-    left: 80px;
-    width: 10px;
-    height: 10px;
-    background: $grey;
-    @include border(100%);
-    &:before {
-        position: absolute;
-        content: "";
-        left: 50px;
-        width: 10px;
-        height: 10px;
-        background: #424b54;
-        @include border(100%);
-    }
-}
-
-.person__nose {
-    z-index: 20;
-    top: 100px;
-    left: 107px;
-    width: 8px;
-    height: 14px;
-    background: #0000001a;
-    @include border(100px);
-
-    &.person__Black {
+// TWEAKS
+.person.person--Black {
+    .person__nose {
         transform: rotate(90deg);
     }
+    .person__hair {
+        border: 2px dashed $body;
+        box-sizing: border-box;
+    }
+    .person__face {
+        border-radius: 70px 70px 100px 100px;
+        -webkit-border-radius: 70px 70px 100px 100px;
+        height: 90px;
+        top: 60px;
+        // TEST
+        /*
+        -webkit-border-radius: 70px 100px 70px 100px;
+        width: 100px;
+        height: 100px;
+        transform: rotate(225deg);
+        */
+    }
+    .person__fringe {
+        display: none;
+    }
 }
 
-.person__mouth {
-    z-index: 20;
-    top: 120px;
-    left: 97px;
-    width: 30px;
-    height: 15px;
-    border-radius: 0 0 100px 100px;
-    background: #424b54;
-    overflow: hidden;
+.person.person--Indian {
+    .person__fringe {
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        left: 63px;
+    }
 }
 
-.person__tongue {
-    top: 5px;
-    left: 8px;
-    width: 30px;
-    height: 20px;
-    background: $pink;
-    @include border(100%);
+.person.person--EU_North {
+    .person__face {
+        border-radius: 100px 100px 80px 80px;
+        -webkit-border-radius: 100px 100px 80px 80px;
+    }
+}
+
+.person.person--EU_South {
+    .person__face {
+        border-radius: 100px 100px 88px 88px;
+        -webkit-border-radius: 100px 100px 88px 88px;
+    }
+}
+
+.person.person--Asian {
+    .person__face {
+        border-radius: 100px 100px 100px 100px;
+        -webkit-border-radius: 100px 100px 100px 100px;
+    }
+    .person__fringe {
+        border-radius: 100% 100% 0 100%;
+        top: 34px;
+        width: 72px;
+        &:before {
+            width: 18px;
+        }
+    }
+    .person__eye {
+        height: 3px;
+        border: none;
+        border-radius: 2px;
+        &:before {
+            border-radius: 2px;
+            height: 3px;
+            border: none;
+            top: 0;
+        }
+    }
 }
