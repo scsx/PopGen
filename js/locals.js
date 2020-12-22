@@ -72,13 +72,13 @@ const local_India = {
 
 const local_Toronto = {
     "races": {
-        EU_North: 35,
-        EU_South: 15,
-        Black: 13,
-        Asian: 15,
-        Indian: 15,
+        EU_North: 34,
+        EU_South: 14,
+        Black: 10,
+        Asian: 17,
+        Indian: 17,
         Native: 1,
-        Latin: 6,
+        Latin: 7,
     }
 };
 
