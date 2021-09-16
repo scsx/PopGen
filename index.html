@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Pop Gen</title>
-    </head>
 
-    <body>
-        <h1>Population Generator</h1>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Pop Gen</title>
+</head>
 
-        <div class="console">
-            <button class="flat-button">US</button>
-            <button class="flat-button">US 1950</button>
-            <button class="flat-button">India</button>
-            <button class="flat-button">Portugal</button>
-            <button class="flat-button">South Africa</button>
-            <button class="flat-button">UK</button>
-            <button class="flat-button">Toronto</button>
-            <div class="select hide">
-                <select id="numberOfPersons">
+<body>
+    <h1>Population Generator</h1>
+
+    <div class="console">
+        <button class="flat-button">US</button>
+        <button class="flat-button">US 1950</button>
+        <button class="flat-button">India</button>
+        <button class="flat-button">Portugal</button>
+        <button class="flat-button">South Africa</button>
+        <button class="flat-button">UK</button>
+        <button class="flat-button">Toronto</button>
+        <div class="selectbox hide">
+            <select class="selectinput" id="numberOfPersons">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -40,42 +38,45 @@
                 <option value="50">50</option>
                 <option value="100">100</option>
             </select>
-            </div>
         </div>
+    </div>
 
-        <button class="flat-button flat-button--run">Generate</button>
+    <button class="flat-button flat-button--run">Generate</button>
 
-        <main id="main"></main>
+    <main id="main"></main>
 
-        <div class="person person--Black person--big hide">
-            <div class="person__hair hair_black"></div>
-            <div class="person__ear skin_black3"></div>
-            <div class="person__ear person__ear--right skin_black3"></div>
-            <div class="person__fringe hair_black"></div>
-            <div class="person__face skin_black3"></div>
-            <div class="person__eye eyes_brown"></div>
-            <div class="person__nose shade_skin_black3"></div>
-            <div class="person__mouth">
-                <div class="person__tongue"></div>
-            </div>
-            <p class="info hide">Black</p>
+    <div class="person person--Black person--big hide">
+        <div class="person__hair hair_black"></div>
+        <div class="person__ear skin_black3"></div>
+        <div class="person__ear person__ear--right skin_black3"></div>
+        <div class="person__fringe hair_black"></div>
+        <div class="person__face skin_black3"></div>
+        <div class="person__eye eyes_brown"></div>
+        <div class="person__nose shade_skin_black3"></div>
+        <div class="person__mouth">
+            <div class="person__tongue"></div>
         </div>
-        <div class="person person--Asian person--big">
-            <div class="person__hair hair_black"></div>
-            <div class="person__ear skin_asian3"></div>
-            <div class="person__ear person__ear--right skin_asian3"></div>
-            <div class="person__fringe hair_black"></div>
-            <div class="person__face skin_asian3"></div>
-            <div class="person__eye eyes_brown"></div>
-            <div class="person__nose shade_skin_asian3"></div>
-            <div class="person__mouth">
-                <div class="person__tongue"></div>
-            </div>
-            <p class="info hide">Asian</p><p>
-        </p></div>
+        <p class="info hide">Black</p>
+    </div>
+    <div class="person person--Asian person--big">
+        <div class="person__hair hair_black"></div>
+        <div class="person__ear skin_asian3"></div>
+        <div class="person__ear person__ear--right skin_asian3"></div>
+        <div class="person__fringe hair_black"></div>
+        <div class="person__face skin_asian3"></div>
+        <div class="person__eye eyes_brown"></div>
+        <div class="person__nose shade_skin_asian3"></div>
+        <div class="person__mouth">
+            <div class="person__tongue"></div>
+        </div>
+        <p class="info hide">Asian</p>
+        <p>
+        </p>
+    </div>
 
-        <script src="js/ethnicities.js"></script>
-        <script src="js/locals.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+    <script src="js/ethnicities.js"></script>
+    <script src="js/locals.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
 </html>

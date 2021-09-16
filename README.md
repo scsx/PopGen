@@ -1,2 +1,2 @@
 # PopGen
-Diversity visualized across some countries
+Diversity visualized across some countries and times

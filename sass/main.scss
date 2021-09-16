@@ -57,61 +57,66 @@ p {
 }
 
 // Select
-/* Reset Select */
-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    outline: 0;
-    box-shadow: none;
-    border: 0 !important;
-    background: darken($body, 10);
-    background-image: none;
-}
-select::-ms-expand {
-    display: none;
-}
-
-.select {
+.selectbox {
     position: relative;
     display: flex;
     width: 20em;
-    height: 3em;
     line-height: 3;
-    background: darken($body, 10);
+    background: $yellow;
     overflow: hidden;
-    border-radius: 0.25em;
-}
-select {
-    flex: 1;
-    padding: 0 0.5em;
-    color: #fff;
-    cursor: pointer;
+    border-radius: 0;
+
+    &::after {
+        content: "\25BC";
+        color: $body;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 1.8rem 1rem 0 1rem;
+        background: $yellowdarker;
+        cursor: pointer;
+        pointer-events: none;
+        transition: 0.25s all ease;
+    }
+
+    &:hover::after {
+        color: darken($body, 10);
+    }
+
+    select.selectinput {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+        outline: 0;
+        box-shadow: none;
+        font-family: "Source Code Pro", sans-serif;
+        color: darken($body, 10);
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 1;
+        border: 0 !important;
+        background: $yellow;
+        background-image: none;
+        flex: 1;
+        padding: 0 0.5em;
+        color: darken($body, 10);
+        cursor: pointer;
+    }
+
+    select.selectinput::-ms-expand {
+        display: none;
+    }
 }
 
-.select::after {
-    content: "\25BC";
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0 1em;
-    background: darken($body, 10);
-    border-left: 1px solid darken($body, 5);
-    cursor: pointer;
-    pointer-events: none;
-    transition: 0.25s all ease;
-}
 
-.select:hover::after {
-    color: #f39c12;
-}
 
 // Btn
 .flat-button {
     border: none;
     position: relative;
-    background: $reddish;
+    background: $yellow;
     margin: 0 2rem 0 0;
     overflow: hidden;
     z-index: 1;
@@ -124,6 +129,8 @@ select {
     color: darken($body, 10);
     font-weight: bold;
     font-size: 2rem;
+    line-height: 1.1;
+
     &--run {
         margin: 5rem auto;
         display: block;
@@ -136,7 +143,7 @@ select {
     left: 0;
     width: 100%;
     height: 100%;
-    background: $redder;
+    background: $yellowdarker;
     content: "";
     z-index: -2;
     transition: transform 0.3s;

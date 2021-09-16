@@ -469,51 +469,49 @@ p {
   padding: 2rem;
   display: flex; }
 
-/* Reset Select */
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  outline: 0;
-  box-shadow: none;
-  border: 0 !important;
-  background: #143e57;
-  background-image: none; }
-
-select::-ms-expand {
-  display: none; }
-
-.select {
+.selectbox {
   position: relative;
   display: flex;
   width: 20em;
-  height: 3em;
   line-height: 3;
-  background: #143e57;
+  background: #fff8d1;
   overflow: hidden;
-  border-radius: 0.25em; }
-
-select {
-  flex: 1;
-  padding: 0 0.5em;
-  color: #fff;
-  cursor: pointer; }
-
-.select::after {
-  content: "\25BC";
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0 1em;
-  background: #143e57;
-  border-left: 1px solid #194d6b;
-  cursor: pointer;
-  pointer-events: none;
-  transition: 0.25s all ease; }
-
-.select:hover::after {
-  color: #f39c12; }
+  border-radius: 0; }
+  .selectbox::after {
+    content: "\25BC";
+    color: #1e5c80;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1.8rem 1rem 0 1rem;
+    background: #fff09e;
+    cursor: pointer;
+    pointer-events: none;
+    transition: 0.25s all ease; }
+  .selectbox:hover::after {
+    color: #143e57; }
+  .selectbox select.selectinput {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    font-family: "Source Code Pro", sans-serif;
+    color: #143e57;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1;
+    border: 0 !important;
+    background: #fff8d1;
+    background-image: none;
+    flex: 1;
+    padding: 0 0.5em;
+    color: #143e57;
+    cursor: pointer; }
+  .selectbox select.selectinput::-ms-expand {
+    display: none; }
 
 .flat-button {
   border: none;
@@ -530,7 +528,8 @@ select {
   text-align: center;
   color: #143e57;
   font-weight: bold;
-  font-size: 2rem; }
+  font-size: 2rem;
+  line-height: 1.1; }
   .flat-button--run {
     margin: 5rem auto;
     display: block; }
