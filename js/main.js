@@ -3,7 +3,7 @@ const peopleSelect = document.getElementById("numberOfPersons");
 
 let settings = {
     peopleNr: peopleSelect.value === "0" ? 100 : peopleSelect.value,
-    defaultLocal: local_Toronto
+    defaultLocal: local_US
 }
 log(peopleSelect.value);
 // Calculate probabilities
